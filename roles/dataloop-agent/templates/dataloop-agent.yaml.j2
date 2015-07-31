@@ -20,4 +20,10 @@ tags: {{ dataloop_tags }}
 {% endif %}
 
 ## Set if you would like a custom name for this agent. Default is hostname
+{% if dataloop_agent_name is defined %}
+name: {{ dataloop_agent_name }}
+{% endif %}
+
+{% if dataloop_agent_name is not defined %}
 #name:
+{% endif %}
