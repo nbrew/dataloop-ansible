@@ -1,2 +1,4 @@
 ---
-# defaults file for .
+dataloop_api_key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+# dataloop_agent_name: 
+# dataloop_tags: <csv list of tags>
