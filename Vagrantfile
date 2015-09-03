@@ -16,6 +16,6 @@ Vagrant.configure("2") do |c|
   c.vm.synced_folder ".", "/vagrant", disabled: false
 
   c.vm.provision "ansible" do |ansible|
-        ansible.playbook = "site.yml"
+        ansible.playbook = "test/integration/default.yml"
   end
 end
