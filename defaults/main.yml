@@ -1,4 +1,10 @@
 ---
+
+## dataloop api key (available from web UI)
 dataloop_api_key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-# dataloop_agent_name: 
-# dataloop_tags: <csv list of tags>
+
+## CSV list of startup tags
+# dataloop_tags: product_name,environment,role
+
+## override agent name (defaults to hostname if not defined)
+# dataloop_agent_name: unique_agent_identifier
