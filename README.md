@@ -4,6 +4,10 @@
 This role installs and configures the dataloop.io agent to send
 metrics back to dataloop.io.
 
+To install from Galaxy:
+
+```ansible-galaxy install dataloop.dataloop-agent```
+
 ## Usage
 
 In order to automatically add a node to dataloop, create a file in
