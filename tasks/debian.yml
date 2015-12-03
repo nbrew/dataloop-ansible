@@ -1,5 +1,7 @@
 ---
 # Ubuntu specific dataloop stuff
+- name: install https apt transport
+  apt: name=apt-transport-https state=present
 
 # Add an Apt signing key, will not download if present
 - name: Add dataloop gpg key
