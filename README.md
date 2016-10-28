@@ -8,6 +8,13 @@ To install from Galaxy:
 
 ```ansible-galaxy install dataloop.dataloop-agent```
 
+## Role Variables
+
+* `dataloop_api_key` - API key to use for the agent registration
+* `dataloop_manage_service` - Enable/disable the service handler (**true**)
+
+
+
 ## Usage
 
 In order to automatically add a node to dataloop, create a file in
