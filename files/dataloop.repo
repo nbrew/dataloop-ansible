@@ -3,6 +3,6 @@
 
 [dataloop]
 name=Dataloop Agent
-baseurl=https://download.dataloop.io/packages/stable/rpm/$basearch/
+baseurl=https://download.dataloop.io/packages/stable/el$releasever/$basearch/
 enabled=1
 gpgcheck=1
