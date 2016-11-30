@@ -8,3 +8,6 @@ dataloop_api_key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## override agent name (defaults to hostname if not defined)
 # dataloop_agent_name: unique_agent_identifier
+
+# Allow role to handle service start/restart
+dataloop_manage_service: true
