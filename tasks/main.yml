@@ -1,13 +1,15 @@
 ---
-# tasks file for guardrail
-
 # include the distro-specific stuff
-- include: debian.yml
+- import_tasks: debian.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
-- include: rhel.yml
+- import_tasks: rhel.yml
   when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux' or ansible_distribution == 'RedHat' or ansible_distribution == 'Amazon'
+
+- import_tasks: windows.yml
+  when: ansible_os_family == 'Windows'
 
 - name: Create the config file
   template: src=dataloop-agent.yaml.j2 dest=/etc/dataloop/agent.yaml owner=root group=dataloop mode=640
   notify: restart dataloop-agent
+  when: ansible_os_family != 'Windows'

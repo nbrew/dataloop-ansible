@@ -1,0 +1,18 @@
+# Windows specific tasks
+---
+- name: Set download file name
+  set_fact:
+    dataloop_windows_exe: dataloop-1.3-windows-installer.exe
+
+- name: Get Windows Temp dir
+  win_shell: $env:temp
+  register: temp_dir
+
+- name: Download the dataloop agent installer
+  win_get_url:
+    url: "https://download.dataloop.io/windows/latest/{{ dataloop_windows_exe }}"
+    dest: "{{ temp_dir.stdout_lines[0] }}\\{{ dataloop_windows_exe }}"
+
+- name: Install dataloop agent
+  win_shell: |
+    "{{ temp_dir.stdout_lines[0] }}\\{{ dataloop_windows_exe }} /S /apikey {{ dataloop_api_key }}"
